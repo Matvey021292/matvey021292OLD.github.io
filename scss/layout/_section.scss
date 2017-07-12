@@ -90,7 +90,7 @@
         }
     }
     .blog-content-news {
-        padding: 20px;
+        padding: 5%;
         margin: 10px;
         transition:all 1s;
         figure {
@@ -123,16 +123,28 @@
         &:hover{
         	transform:scale(1.025);
         }
+         &:hover h3{
+            border-left: 30px solid $colorgreen;
+            border-bottom: 2px solid $colorgreen;
+        }
+        &:hover a {
+            color: $colorgreen;
+        }
     }
 
     .center-content-info{
-    	display:flex;
+        display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 
     	h3{
     		font-size:1.3em;
     	}
     	.blog-content-news{
     		flex:1.0.100;
+            padding:2%;
 
     		.social-logo-icon{
     			i{
