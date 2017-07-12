@@ -1,0 +1,318 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-addthis {
+  background-image: url(sprite.png);
+  background-position: -512px 0px;
+  width: 512px;
+  height: 512px;
+}
+.icon-amazon {
+  background-image: url(sprite.png);
+  background-position: -2560px 0px;
+  width: 512px;
+  height: 512px;
+}
+.icon-bebo {
+  background-image: url(sprite.png);
+  background-position: 0px -512px;
+  width: 512px;
+  height: 512px;
+}
+.icon-behance {
+  background-image: url(sprite.png);
+  background-position: -512px -512px;
+  width: 512px;
+  height: 512px;
+}
+.icon-bing {
+  background-image: url(sprite.png);
+  background-position: -1024px 0px;
+  width: 512px;
+  height: 512px;
+}
+.icon-blogger {
+  background-image: url(sprite.png);
+  background-position: -1024px -512px;
+  width: 512px;
+  height: 512px;
+}
+.icon-delicious {
+  background-image: url(sprite.png);
+  background-position: 0px -1024px;
+  width: 512px;
+  height: 512px;
+}
+.icon-deviantart {
+  background-image: url(sprite.png);
+  background-position: -512px -1024px;
+  width: 512px;
+  height: 512px;
+}
+.icon-digg {
+  background-image: url(sprite.png);
+  background-position: -1024px -1024px;
+  width: 512px;
+  height: 512px;
+}
+.icon-dribble {
+  background-image: url(sprite.png);
+  background-position: -1536px 0px;
+  width: 512px;
+  height: 512px;
+}
+.icon-dropbox {
+  background-image: url(sprite.png);
+  background-position: -1536px -512px;
+  width: 512px;
+  height: 512px;
+}
+.icon-ebay {
+  background-image: url(sprite.png);
+  background-position: -1536px -1024px;
+  width: 512px;
+  height: 512px;
+}
+.icon-evernote {
+  background-image: url(sprite.png);
+  background-position: 0px -1536px;
+  width: 512px;
+  height: 512px;
+}
+.icon-facebook {
+  background-image: url(sprite.png);
+  background-position: -512px -1536px;
+  width: 512px;
+  height: 512px;
+}
+.icon-flickr {
+  background-image: url(sprite.png);
+  background-position: -1024px -1536px;
+  width: 512px;
+  height: 512px;
+}
+.icon-forrst {
+  background-image: url(sprite.png);
+  background-position: -1536px -1536px;
+  width: 512px;
+  height: 512px;
+}
+.icon-foursquare-1 {
+  background-image: url(sprite.png);
+  background-position: -2048px 0px;
+  width: 512px;
+  height: 512px;
+}
+.icon-foursquare {
+  background-image: url(sprite.png);
+  background-position: -2048px -512px;
+  width: 512px;
+  height: 512px;
+}
+.icon-google-plus {
+  background-image: url(sprite.png);
+  background-position: -2048px -1024px;
+  width: 512px;
+  height: 512px;
+}
+.icon-grooveshark {
+  background-image: url(sprite.png);
+  background-position: -2048px -1536px;
+  width: 512px;
+  height: 512px;
+}
+.icon-html5 {
+  background-image: url(sprite.png);
+  background-position: 0px -2048px;
+  width: 512px;
+  height: 512px;
+}
+.icon-instagram {
+  background-image: url(sprite.png);
+  background-position: -512px -2048px;
+  width: 512px;
+  height: 512px;
+}
+.icon-kickstarter {
+  background-image: url(sprite.png);
+  background-position: -1024px -2048px;
+  width: 512px;
+  height: 512px;
+}
+.icon-lastfm {
+  background-image: url(sprite.png);
+  background-position: -1536px -2048px;
+  width: 512px;
+  height: 512px;
+}
+.icon-linkedin {
+  background-image: url(sprite.png);
+  background-position: -2048px -2048px;
+  width: 512px;
+  height: 512px;
+}
+.icon-livejournal {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 512px;
+  height: 512px;
+}
+.icon-myspace {
+  background-image: url(sprite.png);
+  background-position: -2560px -512px;
+  width: 512px;
+  height: 512px;
+}
+.icon-opera {
+  background-image: url(sprite.png);
+  background-position: -2560px -1024px;
+  width: 512px;
+  height: 512px;
+}
+.icon-paypal {
+  background-image: url(sprite.png);
+  background-position: -2560px -1536px;
+  width: 512px;
+  height: 512px;
+}
+.icon-picasa {
+  background-image: url(sprite.png);
+  background-position: -2560px -2048px;
+  width: 512px;
+  height: 512px;
+}
+.icon-pinterest {
+  background-image: url(sprite.png);
+  background-position: 0px -2560px;
+  width: 512px;
+  height: 512px;
+}
+.icon-rss {
+  background-image: url(sprite.png);
+  background-position: -512px -2560px;
+  width: 512px;
+  height: 512px;
+}
+.icon-sharethis {
+  background-image: url(sprite.png);
+  background-position: -1024px -2560px;
+  width: 512px;
+  height: 512px;
+}
+.icon-skype {
+  background-image: url(sprite.png);
+  background-position: -1536px -2560px;
+  width: 512px;
+  height: 512px;
+}
+.icon-soundcloud {
+  background-image: url(sprite.png);
+  background-position: -2048px -2560px;
+  width: 512px;
+  height: 512px;
+}
+.icon-stumbleupon {
+  background-image: url(sprite.png);
+  background-position: -2560px -2560px;
+  width: 512px;
+  height: 512px;
+}
+.icon-technorati {
+  background-image: url(sprite.png);
+  background-position: -3072px 0px;
+  width: 512px;
+  height: 512px;
+}
+.icon-telegram {
+  background-image: url(sprite.png);
+  background-position: -3072px -512px;
+  width: 512px;
+  height: 512px;
+}
+.icon-tumblr {
+  background-image: url(sprite.png);
+  background-position: -3072px -1024px;
+  width: 512px;
+  height: 512px;
+}
+.icon-twitter {
+  background-image: url(sprite.png);
+  background-position: -3072px -1536px;
+  width: 512px;
+  height: 512px;
+}
+.icon-viber {
+  background-image: url(sprite.png);
+  background-position: -3072px -2048px;
+  width: 512px;
+  height: 512px;
+}
+.icon-vimeo {
+  background-image: url(sprite.png);
+  background-position: -3072px -2560px;
+  width: 512px;
+  height: 512px;
+}
+.icon-vk {
+  background-image: url(sprite.png);
+  background-position: 0px -3072px;
+  width: 512px;
+  height: 512px;
+}
+.icon-wikipedia {
+  background-image: url(sprite.png);
+  background-position: -512px -3072px;
+  width: 512px;
+  height: 512px;
+}
+.icon-wordpress {
+  background-image: url(sprite.png);
+  background-position: -1024px -3072px;
+  width: 512px;
+  height: 512px;
+}
+.icon-xing {
+  background-image: url(sprite.png);
+  background-position: -1536px -3072px;
+  width: 512px;
+  height: 512px;
+}
+.icon-yahoo {
+  background-image: url(sprite.png);
+  background-position: -2048px -3072px;
+  width: 512px;
+  height: 512px;
+}
+.icon-yandex {
+  background-image: url(sprite.png);
+  background-position: -2560px -3072px;
+  width: 512px;
+  height: 512px;
+}
+.icon-youtube {
+  background-image: url(sprite.png);
+  background-position: -3072px -3072px;
+  width: 512px;
+  height: 512px;
+}
+.icon-zerply {
+  background-image: url(sprite.png);
+  background-position: -3584px 0px;
+  width: 512px;
+  height: 512px;
+}

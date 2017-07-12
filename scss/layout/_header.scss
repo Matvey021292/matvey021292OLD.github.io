@@ -1,0 +1,61 @@
+
+header{
+    	padding-top: 25%;
+    	background: $backgroundHead;
+    	background-image: url(../img/backgroundLogo.png);
+    	background-size: 90%;
+    	background-position:top center;
+    	background-repeat: no-repeat;
+    	background-attachment: fixed;
+	.logo-section{
+		background: $backgroundHead;
+		padding:0 1% 1% 1%;
+		
+	}
+		
+	img{
+		background: $backgroundHead;
+		display: block;
+		margin: 0px auto;
+		max-width:70%;
+		min-width: 30%;
+
+
+	}
+	.soc-logo{
+		padding:20px;
+		background: $backgroundHead;
+		list-style: none;
+		text-align: center;
+
+		li{
+			display:inline-block;
+			padding:1px;
+			transition: all 1s;
+    			a{	
+					width: 34px;
+    				height: 32px;
+    				background-position: 1px -1px;
+    				background-size: 268px;
+    				margin:5px 10px;
+    				display:block;
+    				opacity: 0.5;
+		  		
+		  				img{
+		  					padding:0;
+		  				}
+		  		}
+		  		&:hover{
+		  			transform:scale(1.3);
+		  			
+
+		  		}
+		  		&:hover a{
+					opacity:1;
+		  		}
+
+		  }
+	}
+
+}
+

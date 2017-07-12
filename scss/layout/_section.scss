@@ -1,0 +1,167 @@
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.blog-content {
+    height: 100%;
+
+    position: relative;
+    padding: 20px;
+
+    h3 {
+        padding: 5px 0 5px 0px;
+        font-size: 35px;
+        text-transform: uppercase;
+        font-family: $fontfamilyradioBold;
+        border-left: 30px solid $colorH;
+        border-bottom: 2px solid $colorH;
+        transition:all 1s;
+        @include _fonts;
+        a {
+            font-weight: 500;
+            color: #000;
+            font-family: $fontfamilyradio;
+            padding-left: 10px;
+            transition:all 0.5s;
+        }
+        &:hover {
+            border-left: 30px solid $colorgreen;
+            border-bottom: 2px solid $colorgreen;
+        }
+        &:hover a {
+            color: $colorgreen;
+        }
+    }
+    h4 {
+        padding: 10px 0 10px 0px;
+        a {
+            font-family: $fontfamilyradio;
+        }
+    }
+    p {
+        padding: 10px 0 10px 0px;
+        font-size: 14px;
+        font-family: $fontfamilyWroboto;
+        font-weight: 500;
+        word-spacing: 1px;
+        line-height: 1.3;
+    }
+    a {
+        color: #000;
+    }
+    .more {
+        float: right;
+        padding: 0px 5px 10px 11px;
+        border-bottom: 1px solid $colorH;
+        border-right: 10px solid $colorH;
+        margin: 0 10px 10px 0;
+        font-family: $fontfamilyradioBold;
+
+        &:hover {
+            color: $colorgreen;
+            border-bottom: 1px solid $colorgreen;
+            border-right: 10px solid $colorgreen;
+        }
+    }
+    .flex-container {
+        display: flex;
+        padding-top: 2%;
+        position: relative;
+        .social-logo-icon {
+            @include _iconGroup;
+            i {
+                border: 2px solid $colorH;
+                font-size: 1.5em;
+                width: 30px;
+                text-align: center;
+                padding: 5px;
+                margin-bottom: 4px;
+                color: $colorH;
+                transition:all 0.5s;
+                &:hover {
+                    border: 2px solid $colorgreen;
+                    color: $colorgreen;
+                    &:hover{
+        			font-size:1.8em;
+        }
+                }
+            }
+        }
+    }
+    .blog-content-news {
+        padding: 20px;
+        margin: 10px;
+        transition:all 1s;
+        figure {
+            position: relative;
+            figcaption {
+                opacity: 0;
+                display: block;
+                background: rgba(0, 0, 0, 0.38);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                top: 80%;
+                right: 0;
+                padding: 20px 20px;
+                color: #fff;
+                transition: all 1s;
+               	font-size: 0.8em;
+               	text-transform:uppercase;
+               	text-shadow: 0.1em 0.1em 0.2em black; color: aliceblue;
+
+               	 data{
+               	 	padding-right: 10px;
+               	 }
+             
+            }
+            &:hover figcaption {
+                opacity: 1;
+            }
+        }
+        &:hover{
+        	transform:scale(1.025);
+        }
+    }
+
+    .center-content-info{
+    	display:flex;
+
+    	h3{
+    		font-size:1.3em;
+    	}
+    	.blog-content-news{
+    		flex:1.0.100;
+
+    		.social-logo-icon{
+    			i{
+    				padding:2px;
+    				width:25px;
+    				font-size:1em;
+    			}
+    		}
+    		h4{
+    			a{
+    				font-size:0.9em;
+    			}
+    		}
+    		
+
+    		figcaption{
+    			top:65%;
+    			bottom:3%;
+    			font-size:0.6em;
+    			data{
+
+    			}
+    		}
+
+    		.more{
+    			font-size:0.8em;
+    		}
+    	}
+
+    }
+
+}
