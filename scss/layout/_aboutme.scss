@@ -1,66 +1,20 @@
 
-.blog-content-aside{
-		border-top: 5px solid $colorH;
-		border-bottom: 5px solid $colorH;
-        background: url(../img/AboutmePhoto.jpg);
-        overflow: hidden;
-        background-attachment: fixed;
-        min-height: 440px;
-		background-size: cover;
-		.textinfo{
-			width: 40%;
-            transition:all 1s;
-			&:hover{
-				width:50%;
+.column_about{
+      .grid{  
+        figure{
+            width: 100%!important;
+            height: 400px;
+             img{
+                        background-attachment: fixed;
+                background-size: cover;
+        
 
-			}
+            } }
+            .effect-layla h2 {
+                    padding-top: 10%;
+                    font-size: 2em;
+
            
-		}
-        h3{
-        	display: inline-block;
-        	margin: 10% 0% 1% 10%;
-        	padding: 1% 0 1% 1%;
-        	font-size: 2em;
-        	border-left: 20px solid $colorgreen;
-        	border-bottom: 1px solid $colorgreen;
-        	transition:all 1s;
-        	&:hover {
-            border-bottom: 1px solid $colorH;
-            border-left-color: $colorH;
-        }
-        	&:hover a {
-            color: $colorH;
-            transition:all 1s;
-          
-        }
-
-        	a{
-        		color: $colorgreen;
-        	}
-        }
-        p{
-        	padding: 4% 4% 4% 25%;
-        	font-size:1.2em;
-        	background: rgba(255, 255, 255, 0.29);
-        	margin-bottom:10px;
-
-        }
-
-        .more {
-
-        float: right;
-        color:$colorgreen;
-        padding: 9px 9px 10px 11px;
-        border-top: 1px solid $colorgreen;
-        border-right: 10px solid $colorgreen;
-        margin: 0 10px 10px 0;
-        transition:all 1s;
-        font-family: $fontfamilyradioBold;
-
-        &:hover {
-            color: $colorH;
-            border-top: 1px solid $colorH;
-            border-right: 10px solid $colorH;
-        }
-    }
-    }
+       
+       } }
+}

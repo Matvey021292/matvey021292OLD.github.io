@@ -1,4 +1,4 @@
-.grid *, *:after, *:before {  box-sizing: border-box; }
+.grid *, *:after, *:before {  -webkit-box-sizing: border-box;  box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
 
@@ -50,7 +50,7 @@
     overflow: hidden;
     margin: -0.135em;
     width: 33.333%;
-    background: #3085a3;
+    background: $colorH !important;
     text-align: center;
     cursor: pointer;
 }
@@ -125,11 +125,13 @@
 /*---------------*/
 .figure.effect-lily .img,
 figure.effect-lily img {
-    width: -webkit-calc(100% + 50px);
     width: calc(100% + 50px);
     opacity: 0.7;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(-40px,0, 0);
     transform: translate3d(-40px,0,0);
 }
@@ -150,14 +152,20 @@ figure.effect-lily p {
 .figure.effect-lily h2,
 figure.effect-lily h2 {
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
 }
 .figure.effect-lily p,
 figure.effect-lily p {
     color: rgba(255,255,255,0.6);
     opacity: 0;
     -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+    transition: opacity 0.2s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.2s, transform 0.35s;
     transition: opacity 0.2s, transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s, -webkit-transform 0.35s;
 }
 .figure.effect-lily:hover img,
 .figure.effect-lily:hover p,
@@ -175,9 +183,11 @@ figure.effect-lily:hover p {
 
 figure.effect-lily:hover p {
     -webkit-transition-delay: 0.05s;
-    transition-delay: 0.05s;
+    -o-transition-delay: 0.05s;
+       transition-delay: 0.05s;
     -webkit-transition-duration: 0.35s;
-    transition-duration: 0.35s;
+    -o-transition-duration: 0.35s;
+       transition-duration: 0.35s;
 }
 
 /*---------------*/
@@ -191,6 +201,8 @@ figure.effect-sadie figcaption::before {
     width: 100%;
     height: 100%;
     background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(72,76,97,0)), color-stop(75%, rgba(72,76,97,0.8)));
+    background: -o-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
     background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
     content: '';
     opacity: 0;
@@ -205,7 +217,11 @@ figure.effect-sadie h2 {
     width: 100%;
     color: #484c61;
     -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+    -webkit-transition: color 0.35s, -webkit-transform 0.35s;
+    transition: color 0.35s, -webkit-transform 0.35s;
+    -o-transition: transform 0.35s, color 0.35s;
     transition: transform 0.35s, color 0.35s;
+    transition: transform 0.35s, color 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,-50%,0);
     transform: translate3d(0,-50%,0);
 }
@@ -213,7 +229,10 @@ figure.effect-sadie h2 {
 figure.effect-sadie figcaption::before,
 figure.effect-sadie p {
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 
 figure.effect-sadie p {
@@ -246,14 +265,18 @@ figure.effect-sadie:hover p {
 
 figure.effect-roxy {
     background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
+    background: -webkit-linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
+    background: -o-linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
     background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
 }
 
 figure.effect-roxy img {
-    width: -webkit-calc(100% + 60px);
     width: calc(100% + 60px);
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(-50px,0,0);
     transform: translate3d(-50px,0,0);
 }
@@ -268,7 +291,10 @@ figure.effect-roxy figcaption::before {
     content: '';
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(-20px,0,0);
     transform: translate3d(-20px,0,0);
 }
@@ -285,7 +311,10 @@ figure.effect-roxy h2 {
 figure.effect-roxy p {
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(-10px,0,0);
     transform: translate3d(-10px,0,0);
 }
@@ -314,6 +343,7 @@ figure.effect-bubba {
 figure.effect-bubba img {
     opacity: 0.7;
     -webkit-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
     transition: opacity 0.35s;
 }
 
@@ -331,27 +361,35 @@ figure.effect-bubba figcaption::after {
     content: '';
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 
 figure.effect-bubba figcaption::before {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     -webkit-transform: scale(0,1);
-    transform: scale(0,1);
+    -ms-transform: scale(0,1);
+        transform: scale(0,1);
 }
 
 figure.effect-bubba figcaption::after {
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
     -webkit-transform: scale(1,0);
-    transform: scale(1,0);
+    -ms-transform: scale(1,0);
+        transform: scale(1,0);
 }
 
 figure.effect-bubba h2 {
     padding-top: 30%;
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,-20px,0);
     transform: translate3d(0,-20px,0);
 }
@@ -360,7 +398,10 @@ figure.effect-bubba p {
     padding: 20px 2.5em;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,20px,0);
     transform: translate3d(0,20px,0);
 }
@@ -369,7 +410,8 @@ figure.effect-bubba:hover figcaption::before,
 figure.effect-bubba:hover figcaption::after {
     opacity: 1;
     -webkit-transform: scale(1);
-    transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
 }
 
 figure.effect-bubba:hover h2,
@@ -390,7 +432,10 @@ figure.effect-romeo {
 
 figure.effect-romeo img {
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,0,300px);
     transform: translate3d(0,0,300px);
 }
@@ -411,7 +456,10 @@ figure.effect-romeo figcaption::after {
     background: #fff;
     content: '';
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(-50%,-50%,0);
     transform: translate3d(-50%,-50%,0);
 }
@@ -435,7 +483,10 @@ figure.effect-romeo p {
     left: 0;
     width: 100%;
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
 figure.effect-romeo h2 {
@@ -469,7 +520,6 @@ figure.effect-layla {
 
 figure.effect-layla img {
     min-width: 100%;
-    height: -webkit-calc(100% + 40px);
     height: calc(100% + 40px);
 }
 
@@ -492,9 +542,11 @@ figure.effect-layla figcaption::before {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     -webkit-transform: scale(0,1);
-    transform: scale(0,1);
+    -ms-transform: scale(0,1);
+        transform: scale(0,1);
     -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
 }
 
 figure.effect-layla figcaption::after {
@@ -505,15 +557,20 @@ figure.effect-layla figcaption::after {
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
     -webkit-transform: scale(1,0);
-    transform: scale(1,0);
+    -ms-transform: scale(1,0);
+        transform: scale(1,0);
     -webkit-transform-origin: 100% 0;
-    transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+        transform-origin: 100% 0;
 }
 
 figure.effect-layla h2 {
     padding-top: 26%;
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
 figure.effect-layla p {
@@ -535,7 +592,10 @@ figure.effect-layla figcaption::before,
 figure.effect-layla figcaption::after,
 figure.effect-layla p {
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 
 figure.effect-layla:hover img {
@@ -548,7 +608,8 @@ figure.effect-layla:hover figcaption::before,
 figure.effect-layla:hover figcaption::after {
     opacity: 1;
     -webkit-transform: scale(1);
-    transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
 }
 
 figure.effect-layla:hover h2,
@@ -563,7 +624,8 @@ figure.effect-layla:hover h2,
 figure.effect-layla:hover p,
 figure.effect-layla:hover img {
     -webkit-transition-delay: 0.15s;
-    transition-delay: 0.15s;
+    -o-transition-delay: 0.15s;
+       transition-delay: 0.15s;
 }
 
 /*---------------*/
@@ -577,6 +639,7 @@ figure.effect-honey {
 figure.effect-honey img {
     opacity: 0.9;
     -webkit-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
     transition: opacity 0.35s;
 }
 
@@ -611,7 +674,10 @@ figure.effect-honey h2 i {
     font-style: normal;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,-30px,0);
     transform: translate3d(0,-30px,0);
 }
@@ -619,7 +685,10 @@ figure.effect-honey h2 i {
 figure.effect-honey figcaption::before,
 figure.effect-honey h2 {
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
 figure.effect-honey:hover figcaption::before,
@@ -636,12 +705,15 @@ figure.effect-honey:hover h2 i {
 
 figure.effect-oscar {
     background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+    background: -webkit-linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
+    background: -o-linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
     background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
 }
 
 figure.effect-oscar img {
     opacity: 0.9;
     -webkit-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
     transition: opacity 0.35s;
 }
 
@@ -649,6 +721,7 @@ figure.effect-oscar figcaption {
     padding: 3em;
     background-color: rgba(58,52,42,0.7);
     -webkit-transition: background-color 0.35s;
+    -o-transition: background-color 0.35s;
     transition: background-color 0.35s;
 }
 
@@ -665,7 +738,10 @@ figure.effect-oscar figcaption::before {
 figure.effect-oscar h2 {
     margin: 20% 0 10px 0;
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
 }
@@ -674,9 +750,13 @@ figure.effect-oscar figcaption::before,
 figure.effect-oscar p {
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: scale(0);
-    transform: scale(0);
+    -ms-transform: scale(0);
+        transform: scale(0);
 }
 
 figure.effect-oscar:hover h2 {
@@ -688,7 +768,8 @@ figure.effect-oscar:hover figcaption::before,
 figure.effect-oscar:hover p {
     opacity: 1;
     -webkit-transform: scale(1);
-    transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
 }
 
 figure.effect-oscar:hover figcaption {
@@ -726,7 +807,10 @@ figure.effect-marley p {
 figure.effect-marley h2 {
     top: 30px;
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,20px,0);
     transform: translate3d(0,20px,0);
 }
@@ -752,7 +836,10 @@ figure.effect-marley h2::after,
 figure.effect-marley p {
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 
 figure.effect-marley:hover h2::after,
@@ -773,21 +860,29 @@ figure.effect-ruby {
 figure.effect-ruby img {
     opacity: 0.7;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: scale(1.15);
-    transform: scale(1.15);
+    -ms-transform: scale(1.15);
+        transform: scale(1.15);
 }
 
 figure.effect-ruby:hover img {
     opacity: 0.5;
     -webkit-transform: scale(1);
-    transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
 }
 
 figure.effect-ruby h2 {
     margin-top: 20%;
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,20px,0);
     transform: translate3d(0,20px,0);
 }
@@ -798,7 +893,10 @@ figure.effect-ruby p {
     border: 1px solid #fff;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,20px,0) scale(1.1);
     transform: translate3d(0,20px,0) scale(1.1);
 } 
@@ -823,11 +921,13 @@ figure.effect-milo {
 }
 
 figure.effect-milo img {
-    width: -webkit-calc(100% + 60px);
     width: calc(100% + 60px);
     opacity: 1;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(-30px,0,0) scale(1.12);
     transform: translate3d(-30px,0,0) scale(1.12);
     -webkit-backface-visibility: hidden;
@@ -854,7 +954,10 @@ figure.effect-milo p {
     text-align: right;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(-40px,0,0);
     transform: translate3d(-40px,0,0);
 }
@@ -871,11 +974,15 @@ figure.effect-milo:hover p {
 
 figure.effect-dexter {
     background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(37,141,200,1)),to(rgba(104,60,19,1)));
+    background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%);
+    background: -o-linear-gradient(top, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%);
     background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%); 
 }
 
 figure.effect-dexter img {
     -webkit-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
     transition: opacity 0.35s;
 }
 
@@ -888,12 +995,14 @@ figure.effect-dexter figcaption::after {
     right: 30px;
     bottom: 30px;
     left: 30px;
-    height: -webkit-calc(50% - 30px);
     height: calc(50% - 30px);
     border: 7px solid #fff;
     content: '';
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,-100%,0);
     transform: translate3d(0,-100%,0);
 }
@@ -915,7 +1024,10 @@ figure.effect-dexter p {
     left: 60px;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,-100px,0);
     transform: translate3d(0,-100px,0);
 }
@@ -935,10 +1047,12 @@ figure.effect-sarah {
 }
 
 figure.effect-sarah img {
-    width: -webkit-calc(100% + 20px);
     width: calc(100% + 20px);
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(-10px,0,0);
     transform: translate3d(-10px,0,0);
     -webkit-backface-visibility: hidden;
@@ -970,7 +1084,10 @@ figure.effect-sarah h2::after {
     background: #fff;
     content: '';
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(-100%,0,0);
     transform: translate3d(-100%,0,0);
 }
@@ -984,7 +1101,10 @@ figure.effect-sarah p {
     padding: 1em 0;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(100%,0,0);
     transform: translate3d(100%,0,0);
 }
@@ -1007,7 +1127,10 @@ figure.effect-zoe figcaption {
     background: #fff;
     color: #3c4a50;
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
 }
@@ -1029,13 +1152,17 @@ figure.effect-zoe p {
     font-size: 90%;
     opacity: 0;
     -webkit-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
     transition: opacity 0.35s;
 }
 
 figure.effect-zoe h2,
 figure.effect-zoe figcaption > span {
     -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,200%,0);
     transform: translate3d(0,200%,0);
 }
@@ -1078,45 +1205,54 @@ figure.effect-zoe:hover figcaption > span {
 
 figure.effect-zoe:hover h2 {
     -webkit-transition-delay: 0.05s;
-    transition-delay: 0.05s;
+    -o-transition-delay: 0.05s;
+       transition-delay: 0.05s;
 }
 
 figure.effect-zoe:hover figcaption > span:nth-child(4) {
     -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+       transition-delay: 0.1s;
 }
 
 figure.effect-zoe:hover figcaption > span:nth-child(3) {
     -webkit-transition-delay: 0.15s;
-    transition-delay: 0.15s;
+    -o-transition-delay: 0.15s;
+       transition-delay: 0.15s;
 }
 
 figure.effect-zoe:hover figcaption > span:nth-child(2) {
     -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+       transition-delay: 0.2s;
 }
 
 /*---------------*/
 /***** Chico *****/
 /*---------------*/
-
+.figure.effect-chico .img ,
 figure.effect-chico img {
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: scale(1.12);
-    transform: scale(1.12);
+    -ms-transform: scale(1.12);
+        transform: scale(1.12);
 }
-
+.figure.effect-chico:hover img,
 figure.effect-chico:hover img {
     opacity: 0.5;
     -webkit-transform: scale(1);
-    transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
 }
-
+.figure.effect-chico .figcaption,
 figure.effect-chico figcaption {
     padding: 3em;
 }
-
+.figure.effect-chico .figcaption::before,
 figure.effect-chico figcaption::before {
     position: absolute;
     top: 30px;
@@ -1126,39 +1262,48 @@ figure.effect-chico figcaption::before {
     border: 1px solid #fff;
     content: '';
     -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+        transform: scale(1.1);
 }
-
+.figure.effect-chico .figcaption::before,
+.figure.effect-chico p ,
 figure.effect-chico figcaption::before,
 figure.effect-chico p {
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
-
+.figure.effect-chico h2,
 figure.effect-chico h2 {
     padding: 20% 0 20px 0;
 }
-
+.figure.effect-chico p,
 figure.effect-chico p {
     margin: 0 auto;
     max-width: 200px;
     -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+    -ms-transform: scale(1.5);
+        transform: scale(1.5);
 }
-
+.figure.effect-chico:hover .figcaption::before,
+.figure.effect-chico:hover p,
 figure.effect-chico:hover figcaption::before,
 figure.effect-chico:hover p {
     opacity: 1;
     -webkit-transform: scale(1);
-    transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
 }
 
 @media screen and (max-width: 69.5em) {
+    .grid .figure,
     .grid figure {
         width: 50%;
     }   
-
+.grid .figure .figcaption,
     .grid figure figcaption {
         font-size: 90%;
     }
@@ -1166,7 +1311,7 @@ figure.effect-chico:hover p {
 
 
 @media screen and (max-width: 41.5em) {
-
+.grid .figure,
     .grid figure {
         width: 100%;
     }

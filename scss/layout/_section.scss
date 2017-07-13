@@ -1,17 +1,26 @@
 .content {
     width: 80%;
     margin: 0 auto;
-    @media(max-width:600px){
-        width:100%;
+    @media(max-width: 600px) {
+        width: 100%;
     }
 }
 
 .blog-content {
     height: 100%;
-
     position: relative;
     padding: 20px;
-
+    .one_bloc {
+        &.blog-content-news {
+            padding: 2% !important;
+            margin: 0 13% !important;
+        }
+    }
+    .border {
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        margin: 0 !important;
+    }
     h3 {
         padding: 5px 0 5px 0px;
         font-size: 35px;
@@ -19,14 +28,18 @@
         font-family: $fontfamilyradioBold;
         border-left: 30px solid $colorH;
         border-bottom: 2px solid $colorH;
-        transition:all 1s;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
         @include _fonts;
         a {
             font-weight: 500;
             color: #000;
             font-family: $fontfamilyradio;
             padding-left: 10px;
-            transition:all 0.5s;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
         }
         &:hover {
             border-left: 30px solid $colorgreen;
@@ -60,8 +73,9 @@
         border-right: 10px solid $colorH;
         margin: 0 10px 10px 0;
         font-family: $fontfamilyradioBold;
-        transition:all 0.5s;
-
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
         &:hover {
             color: $colorgreen;
             border-bottom: 1px solid $colorgreen;
@@ -69,6 +83,8 @@
         }
     }
     .flex-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding-top: 2%;
         position: relative;
@@ -82,43 +98,84 @@
                 padding: 5px;
                 margin-bottom: 4px;
                 color: $colorH;
-                transition:all 0.5s;
+                -webkit-transition: all 0.5s;
+                -o-transition: all 0.5s;
+                transition: all 0.5s;
                 &:hover {
                     border: 2px solid $colorgreen;
                     color: $colorgreen;
-                    &:hover{
-        			font-size:1.8em;
-        }
+                    &:hover {
+                        font-size: 1.8em;
+                    }
                 }
             }
         }
     }
-    
     .blog-content-news {
+        border:1px solid transparent;
         padding: 5%;
         margin: 10px;
-        transition:all 1s;
-          flex: 1 1 250px;
-    border-radius: 5px;
-    display: flex;
-    flex-flow: column;
-        .grid{
-            padding:0;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 250px;
+                flex: 1 1 250px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
+
+        &:hover.efect{
+            position: relative;
+            background: $backgroundHead;
+        }
+        &:hover.efect:before, &:hover.efect:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+          box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+&:hover.efect:after
+{
+  -webkit-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+          transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+         div {
+                margin-top: auto !important;
+            }
+        .grid {
+            padding: 0;
         }
         figure {
             width: 100%;
             figcaption {
-
                 display: block;
                 background: rgba(0, 0, 0, 0.38);
                 position: absolute;
-
                 color: #fff;
-
-               	font-size: 0.8em;
-               	text-transform:uppercase;
-               	text-shadow: 0.1em 0.1em 0.2em black; color: aliceblue;
-                p{
+                font-size: 0.8em;
+                text-transform: uppercase;
+                text-shadow: 0.1em 0.1em 0.2em black;
+                color: aliceblue;
+                p {
                     position: absolute;
                     bottom: 100%;
                     padding: 1em;
@@ -126,94 +183,98 @@
                     text-transform: none;
                     font-size: 80%;
                     -webkit-transition: opacity 0.35s;
+                    -o-transition: opacity 0.35s;
                     transition: opacity 0.35s;
                 }
-
-               	 data{
-               	 	padding-right: 10px;
-               	 }
-                 img {max-width: 100%; height: auto;}
-             
+                data {
+                    padding-right: 10px;
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
             }
             &:hover figcaption {
                 opacity: 1;
             }
         }
-        &:hover{
-        	transform:scale(1.025);
-        }
-         &:hover h3{
+        &:hover h3 {
             border-left: 30px solid $colorgreen;
             border-bottom: 2px solid $colorgreen;
         }
         &:hover a {
             color: $colorgreen;
         }
-
         &:hover .social-logo-icon i {
             color: $colorgreen;
-            border:2px solid $colorgreen;
+            border: 2px solid $colorgreen;
         }
-        &:hover .more{
+        &:hover .more {
             color: $colorgreen;
             border-bottom: 1px solid $colorgreen;
             border-right: 10px solid $colorgreen;
         }
-    }
-
-
-    .center-content-info{
-    display: flex;
-    flex-flow: row wrap;
-
-    	h3{
-    		font-size:1.3em;
-    	}
-    	.blog-content-news{
-    flex: 1 1 250px;
-    margin: 10px;
-    border-radius: 5px;
-    padding: 2%;
-    display: flex;
-    flex-flow: column;
-
-    		.social-logo-icon{
-    			i{
-    				padding:2px;
-    				width:25px;
-    				font-size:1em;
-    			}
-    		}
-    		h4{
-    			a{
-    				font-size:0.9em;
-    			}
-    		}
-    		
-
-    		figcaption{
-    			font-size:0.6em;
-    			data{
-
-    			}
-    		}
-
-    		.more{
-    			font-size:0.8em;
-    		}
-    	}
-
-
-    }
-
-    .column{
+        &:hover {
            
-           .blog-content-news{
 
-                    div{
-                        margin-top:auto;
-                    }
-           }
         }
+        
+    }
+    
+}
 
+.center-content-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    h3 {
+        font-size: 1.3em;
+    }
+    .blog-content-news {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 250px;
+                flex: 1 1 250px;
+        margin: 10px;
+        border-radius: 5px;
+        padding: 2%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
+        .social-logo-icon {
+            i {
+                padding: 2px;
+                width: 25px;
+                font-size: 1em;
+                &:hover {
+                    padding: 3px;
+                    &:hover {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+        h4 {
+            a {
+                font-size: 0.9em;
+            }
+        }
+        figcaption {
+            font-size: 0.6em;
+            data {}
+        }
+        .more {
+            font-size: 0.8em;
+        }
+    }
+    .column {
+        
+    }
 }

@@ -25,7 +25,8 @@ html, body {
 	bottom: 0;
 	text-align: center;
 	left: 50%;
-  	transform: translateX(-50%);
+  	-ms-transform: translateX(-50%);
+  	    transform: translateX(-50%);
   	-webkit-transform: translateX(-50%);
 }
 
@@ -45,6 +46,8 @@ html, body {
 	max-height: 630px;
 	overflow: hidden;
 	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
 	transition: opacity 0.5s ease-in-out;
 }
 
@@ -55,6 +58,8 @@ html, body {
 .hsldr-gallery-container {
 	position: relative;
 	left: 0;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 	overflow: hidden;
 	width: 99999px;
@@ -64,8 +69,8 @@ html, body {
 
 .hsldr-image-container {
 	float: left;
-	display: -ms-flexbox;      /* TWEENER - IE 10 */
-	display: -webkit-flex;     /* NEW - Chrome */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */     /* NEW - Chrome */
+	display: -webkit-box;
 	display: flex;  
 }
 
@@ -90,7 +95,11 @@ html, body {
     padding: 3%;
     opacity: 0;
     text-align: center;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -o-transition: opacity 0.1s ease-in-out;
     transition: opacity 0.1s ease-in-out;
     font-size: 1.6rem;
     font-weight: 200;
@@ -106,6 +115,8 @@ html, body {
 	content: '';
 	display: block;
 	z-index: 0;
+	-webkit-transition: background-color 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out;
 	transition: background-color 0.3s ease-in-out;
 }
 
@@ -158,11 +169,15 @@ html, body {
 }
 
 .showcaption .info:before {
-  	transform: rotate(45deg);
+  	-webkit-transform: rotate(45deg);
+  	    -ms-transform: rotate(45deg);
+  	        transform: rotate(45deg);
 }
 
 .showcaption .info:after {
-  	transform: rotate(-45deg);
+  	-webkit-transform: rotate(-45deg);
+  	    -ms-transform: rotate(-45deg);
+  	        transform: rotate(-45deg);
 }
 
 .hsldr-container .showcaption figcaption,
@@ -175,13 +190,16 @@ html, body {
 .hsldr-next, .hsldr-prev {
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	    transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	width: 15px;
 	height: 30px;
 	background-color: rgba(0,0,0,0.4);
 	color: #fff;
+	-webkit-transition: background-color 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out;
 	transition: background-color 0.3s ease-in-out;
 	padding: 15px 20px;
 	z-index: 4;
@@ -212,8 +230,7 @@ html, body {
 
 .hsldr-next:before {
 	-ms-transform: rotate(45deg); /* IE 9 */
-    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-    -moz-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */ /* Chrome, Safari, Opera */
     transform: rotate(45deg);
     top: 9px;
     left: 0;
@@ -236,8 +253,7 @@ html, body {
 
 .hsldr-prev:before {
 	-ms-transform: rotate(-45deg); /* IE 9 */
-    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
-    -moz-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */ /* Chrome, Safari, Opera */
     transform: rotate(-45deg);
     top: 9px;
     left: 0;
@@ -245,8 +261,7 @@ html, body {
 
 .hsldr-prev:after {
 	-ms-transform: rotate(45deg); /* IE 9 */
-    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-    -moz-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */ /* Chrome, Safari, Opera */
     transform: rotate(45deg);
     top: 17px;
     left: 0;

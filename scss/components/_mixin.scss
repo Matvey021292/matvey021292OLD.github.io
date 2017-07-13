@@ -4,15 +4,37 @@
 @import url('https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
 @font-face{
-	font-family: fantastic;
+	font-family: 'fantastic';
 	src:url('../fonts/avesome.ttf');
 	font-weight: bold;
+}
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: feathericons;
+    src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+    src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+        url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+        url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+        url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
 }
 @font-face{
 	font-family: roadRadio;
 	src:url('../fonts/RoadRadio.ttf');
 	font-weight: normal;
 }
+@font-face{
+  font-family: intro;
+  src:url('../fonts/intro.otf'),
+  url('../fonts/intro.otf') format('woff');
+  font-weight: normal;
+}
+@font-face{
+  font-family: 'Intro Inline';
+  src:url('../fonts/Intro Inline.otf'),
+      url('../fonts/Intro Inline.woff') format('woff');
+  font-weight: normal;
+  }
 @font-face{
 	font-family: roadRadioBold;
 	src:url('../fonts/RoadRadio-Bold.ttf');
@@ -25,8 +47,11 @@ $fontFamilyFira:'Fira Mono', monospace;
 $fontfamilyWeb: 'Istok Web', sans-serif;
 $fontfamilyWfantasy: fantastic, sans-serif;
 $fontfamilyWroboto: 'Roboto', sans-serif;
-$fontfamilyradio: 'roadRadio', sans-serif;
-$fontfamilyradioBold: 'roadRadioBold', sans-serif;
+$fontfamilyradio: roadRadio, sans-serif;
+$fontfamilyfeaser:    feathericons,sans-serif;
+$fontfamilyradioBold: roadRadioBold, sans-serif;
+$fontfamilyintro: intro, sans-serif;
+$fontfamilyintroInline: 'Intro Inline', sans-serif;
 $textshadow:   0 1px 0 #ccc,
                0 2px 0 #c9c9c9,
                0 3px 0 #bbb,
