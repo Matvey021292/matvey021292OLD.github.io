@@ -1035,6 +1035,84 @@ html, body {
   .copyrights span:before {
     border-right: none; } }
 
+.wrapper {
+  margin: 50px auto;
+  width: 15%;
+  height: 40%;
+  background: rgba(74, 73, 73, 0.71);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 90;
+  right: 5%;
+  position: fixed;
+  transition: all 1s;
+  opacity: 0;
+  transform: rotate(-3deg);
+  animation: upDown 5s linear; }
+  .wrapper:hover {
+    opacity: 0; }
+
+@keyframes upDown {
+  0% {
+    right: -5%;
+    opacity: 0; }
+  50% {
+    right: 15%;
+    opacity: 1; }
+  100% {
+    right: 5%;
+    opacity: 0; } }
+
+.ribbon-wrapper-green {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px; }
+
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45));
+  background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image: -moz-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image: -ms-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image: -o-linear-gradient(top, #BFDC7A, #8EBF45);
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3); }
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top: 3px solid #6e8900;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  position: absolute;
+  bottom: -3px; }
+
+.ribbon-green:before {
+  left: 0; }
+
+.ribbon-green:after {
+  right: 0; }
+
 .grid *, *:after, *:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
