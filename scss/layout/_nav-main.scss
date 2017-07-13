@@ -16,6 +16,9 @@ nav ul {
 }
 nav ul li {
 	display:inline-block;
+	@media(max-width:769px){
+		display:none;
+	}
 }
 nav ul li a {
 	color:#333;

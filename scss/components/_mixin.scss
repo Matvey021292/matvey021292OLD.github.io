@@ -23,18 +23,28 @@
 	src:url('../fonts/RoadRadio.ttf');
 	font-weight: normal;
 }
-@font-face{
-  font-family: intro;
-  src:url('../fonts/intro.otf'),
-  url('../fonts/intro.otf') format('woff');
+@font-face {
+  font-family: 'Intro';
+  src: url('../fonts/intro/Intro.eot');
+  src: url('../fonts/intro/Intro.woff2') format('woff2'),
+       url('../fonts/intro/Intro.woff') format('woff'),
+       url('../fonts/intro/Intro.ttf') format('truetype'),
+       url('../fonts/intro/Intro.svg#Intro') format('svg'),
+       url('../fonts/intro/Intro.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
+  font-style: normal;
 }
-@font-face{
-  font-family: 'Intro Inline';
-  src:url('../fonts/Intro Inline.otf'),
-      url('../fonts/Intro Inline.woff') format('woff');
+@font-face {
+  font-family: 'Intro-Inline';
+  src: url('../fonts/introInline/Intro-Inline.eot');
+  src: url('../fonts/introInline/Intro-Inline.woff2') format('woff2'),
+       url('../fonts/introInline/Intro-Inline.woff') format('woff'),
+       url('../fonts/introInline/Intro-Inline.ttf') format('truetype'),
+       url('../fonts/introInline/Intro-Inline.svg#Intro-Inline') format('svg'),
+       url('../fonts/introInline/Intro-Inline.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
-  }
+  font-style: normal;
+}
 @font-face{
 	font-family: roadRadioBold;
 	src:url('../fonts/RoadRadio-Bold.ttf');
@@ -50,8 +60,8 @@ $fontfamilyWroboto: 'Roboto', sans-serif;
 $fontfamilyradio: roadRadio, sans-serif;
 $fontfamilyfeaser:    feathericons,sans-serif;
 $fontfamilyradioBold: roadRadioBold, sans-serif;
-$fontfamilyintro: intro, sans-serif;
-$fontfamilyintroInline: 'Intro Inline', sans-serif;
+$fontfamilyintro: 'Intro', sans-serif;
+$fontfamilyintroInline: 'Intro-Inline', sans-serif;
 $textshadow:   0 1px 0 #ccc,
                0 2px 0 #c9c9c9,
                0 3px 0 #bbb,

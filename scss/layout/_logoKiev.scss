@@ -2,8 +2,12 @@
   font-family: 'Raleway', sans-serif;
   padding: 1em 2em;
   font-size: 18px;
-  color: $fontfamilyintroInline;
+  font-family: $fontfamilyintroInline;
   text-align:center;
+  overflow:hidden;
+  @media(max-width:400px){
+  	font-size:8px;
+  }
 }
 
 .textKiev h1,

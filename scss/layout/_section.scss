@@ -10,10 +10,16 @@
     height: 100%;
     position: relative;
     padding: 20px;
+    @media(max-width:600px){
+        padding:0;
+    }
     .one_bloc {
         &.blog-content-news {
             padding: 2% !important;
             margin: 0 13% !important;
+            @media(max-width:800px){
+                margin:10px !important;
+            }
         }
     }
     .border {
@@ -31,6 +37,9 @@
         -webkit-transition: all 1s;
         -o-transition: all 1s;
         transition: all 1s;
+        @media(max-width:500px){
+            font-size:1.5em;
+        }
         @include _fonts;
         a {
             font-weight: 500;
@@ -88,8 +97,21 @@
         display: flex;
         padding-top: 2%;
         position: relative;
+
+
+        @media(max-width:500px){
+            display:flex;
+            flex-wrap:wrap;
+        }
         .social-logo-icon {
             @include _iconGroup;
+            @media(max-width:500px){
+                display:flex;
+                flex-direction:row;
+                margin-top:10px;
+                flex:1 1 100%;
+
+            }
             i {
                 border: 2px solid $colorH;
                 font-size: 1.5em;
@@ -101,12 +123,27 @@
                 -webkit-transition: all 0.5s;
                 -o-transition: all 0.5s;
                 transition: all 0.5s;
+
                 &:hover {
-                    border: 2px solid $colorgreen;
-                    color: $colorgreen;
+                    border: 2px solid $colorH !important;
+                    color: $colorH !important;
                     &:hover {
                         font-size: 1.8em;
-                    }
+                         @media(max-width:500px){
+                       font-size:1em;
+                        
+        
+                }
+            }
+               
+                 
+                }
+               
+                @media(max-width:500px){
+            font-size:1em;
+                        text-align:center;
+                    margin:2px;
+                    padding:2px 0px;
                 }
             }
         }
@@ -257,6 +294,10 @@
                     padding: 3px;
                     &:hover {
                         font-size: 1.2em;
+                        @media(max-width:400px){
+                            font-size:1em;
+                            padding:2px;
+                        }
                     }
                 }
             }
