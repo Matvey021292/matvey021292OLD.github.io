@@ -1,6 +1,9 @@
 .content {
     width: 80%;
     margin: 0 auto;
+    @media(max-width:600px){
+        width:100%;
+    }
 }
 
 .blog-content {
@@ -57,6 +60,7 @@
         border-right: 10px solid $colorH;
         margin: 0 10px 10px 0;
         font-family: $fontfamilyradioBold;
+        transition:all 0.5s;
 
         &:hover {
             color: $colorgreen;
@@ -89,31 +93,46 @@
             }
         }
     }
+    
     .blog-content-news {
         padding: 5%;
         margin: 10px;
         transition:all 1s;
+          flex: 1 1 250px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+        .grid{
+            padding:0;
+        }
         figure {
-            position: relative;
+            width: 100%;
             figcaption {
-                opacity: 0;
+
                 display: block;
                 background: rgba(0, 0, 0, 0.38);
                 position: absolute;
-                bottom: 0;
-                left: 0;
-                top: 80%;
-                right: 0;
-                padding: 20px 20px;
+
                 color: #fff;
-                transition: all 1s;
+
                	font-size: 0.8em;
                	text-transform:uppercase;
                	text-shadow: 0.1em 0.1em 0.2em black; color: aliceblue;
+                p{
+                    position: absolute;
+                    bottom: 100%;
+                    padding: 1em;
+                    color: #fff;
+                    text-transform: none;
+                    font-size: 80%;
+                    -webkit-transition: opacity 0.35s;
+                    transition: opacity 0.35s;
+                }
 
                	 data{
                	 	padding-right: 10px;
                	 }
+                 img {max-width: 100%; height: auto;}
              
             }
             &:hover figcaption {
@@ -130,21 +149,33 @@
         &:hover a {
             color: $colorgreen;
         }
+
+        &:hover .social-logo-icon i {
+            color: $colorgreen;
+            border:2px solid $colorgreen;
+        }
+        &:hover .more{
+            color: $colorgreen;
+            border-bottom: 1px solid $colorgreen;
+            border-right: 10px solid $colorgreen;
+        }
     }
 
+
     .center-content-info{
-        display: flex;
-    align-items: stretch;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
 
     	h3{
     		font-size:1.3em;
     	}
     	.blog-content-news{
-    		flex:1.0.100;
-            padding:2%;
+    flex: 1 1 250px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 2%;
+    display: flex;
+    flex-flow: column;
 
     		.social-logo-icon{
     			i{
@@ -161,8 +192,6 @@
     		
 
     		figcaption{
-    			top:65%;
-    			bottom:3%;
     			font-size:0.6em;
     			data{
 
@@ -174,6 +203,17 @@
     		}
     	}
 
+
     }
+
+    .column{
+           
+           .blog-content-news{
+
+                    div{
+                        margin-top:auto;
+                    }
+           }
+        }
 
 }
