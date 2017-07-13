@@ -687,6 +687,7 @@ html, body {
   .blog-content h3 {
     padding: 5px 0 5px 0px;
     font-size: 35px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-family: roadRadioBold, sans-serif;
     border-left: 30px solid #795a5a;
@@ -746,7 +747,6 @@ html, body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 2%;
     position: relative; }
     @media (max-width: 500px) {
       .blog-content .flex-container {
@@ -804,6 +804,8 @@ html, body {
     -webkit-box-direction: normal;
     -ms-flex-flow: column;
     flex-flow: column; }
+    .blog-content .blog-content-news .efect {
+      position: relative !important; }
     .blog-content .blog-content-news:hover.efect {
       position: relative;
       background: linear-gradient(to right, #ECE9E6, #fff); }
