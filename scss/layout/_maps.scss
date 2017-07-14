@@ -2,11 +2,14 @@
 	width: 76.3%;
 	margin:0 auto;
 	padding: 1% 0;
+  font-family:$fontfamilyintroInline;
+
 
 	.blog-content{
 
 		h3{
 			width:100;
+
 		}
 
 		& > div{
@@ -49,8 +52,9 @@
   width: 100%;
   bottom: 0;
   left: 0;
+  font-style:normal;
   padding: 1.5em 0em;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color:$colorgreen;
   color: white;
   font-size: 13px;
   font-size: 0.8125rem;
@@ -100,56 +104,6 @@
 }
 
 
+
 /*Стили для демо*/
-.copyrights {
-  background:#01BC78;
-  line-height: 3em;
-  text-align: center;
-  color:#fff;
-  font-size: 1.2em;
-}
 
-.copyrights a {
-  background: #fff;
-  color:#01BC78;
-  text-decoration: none;
-  padding:6px 9px;
-  border-radius: 4px;
-  -webkit-transition:background 0.35s ease;
-          transition:background 0.35s ease;
-}
-
-.copyrights a:hover {
-  background: #F0F0F0;
-  color:#01BC78;
-}
-
-.copyrights span {
-  position: relative;
-  padding-left:14px;
-}
-
-.copyrights span:before {
-  content:"";
-  position: absolute;
-  top:0;
-  left:4px;
-  height: 100%;
-  border-right:2px solid #fff;
-}
-
-@media all and (max-width: 480px){
-  .copyrights {
-    padding-top:10px;
-  }
-
-  .copyrights span, .copyrights a {
-    display: block;
-    width: 70%;
-    margin:0 auto;
-  }
-
-  .copyrights span:before {
-    border-right:none;
-  }
-}
