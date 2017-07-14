@@ -4,6 +4,15 @@
 	bottom: 2%;
 	cursor:pointer;
     z-index:999;
+    @media(max-width: 500px){
+       img{
+        width:50%;
+
+    } 
+    right:-7%;
+    bottom:0;
+    }
+    
    }
 
 
@@ -37,6 +46,13 @@ inset 0 0 0 15px   rgba(121, 90, 90, 0.1);
     -moz-border-radius: 999px;
     border-radius: 999px;
     /* border-radius: 50% has issues on some mobile browsers */
+
+    @media(max-width:500px){
+        width:30%;
+        height:60%;
+        right:24px;
+
+    }
 }
 
 .pulse1 {
@@ -61,6 +77,11 @@ inset 0 0 0 15px   rgba(121, 90, 90, 0.1);
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    @media(max-width:500px){
+        width:60%;
+        height:110%;
+        right:22px;
+    }
 }
 
 .pulse2 {
@@ -85,6 +106,10 @@ inset 0 0 0 15px   rgba(121, 90, 90, 0.1);
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    @media(max-width:500px){
+        width:60%;
+        height:115%;
+    }
 }
 
 @-webkit-keyframes pulsejg1 {

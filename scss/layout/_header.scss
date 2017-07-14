@@ -19,55 +19,13 @@ header{
 		margin: 0px auto;
 		max-width:70%;
 		min-width: 30%;
-
-
 	}
-	.soc-logo{
-		padding:20px;
-		background: $backgroundHead;
-		list-style: none;
-		text-align: center;
-		@media(max-width:400px){
-			padding:0;
-		}
+	
 
-		li{
-			display:inline-block;
-			padding:1px;
-			-webkit-transition: all 1s;
-			-o-transition: all 1s;
-			transition: all 1s;
-    			a{	
-					width: 34px;
-    				height: 32px;
-    				background-position: 1px -1px;
-    				background-size: 268px;
-    				margin:5px 10px;
-    				display:block;
-    				opacity: 0.5;
-    				@media(max-width:400px){
-    					padding:0;
-    				}
-		  		
-		  				img{
-		  					padding:0;
-		  				}
-		  		}
-		  		&:hover{
-		  			-webkit-transform:scale(1.3);
-		  			    -ms-transform:scale(1.3);
-		  			        transform:scale(1.3);
-		  			
-
-		  		}
-		  		&:hover a{
-					opacity:1;
-		  		}
-
-		  }
+		
 	}
 
-}
+
 .social-container {
 			
 			width: 380px;
@@ -76,12 +34,13 @@ header{
 		.social-container .links {
 			text-align: center;
 			margin-bottom:10px;
+			padding:0 10px;
 		}
 		.social-container .links a {
 			margin: 0 20px;
 			color: #ccc;
 			text-decoration: none;
-			font-size: 34px;
+			font-size: 30px;
 			font-weight: bold;
 			text-shadow: 0px 2px 3px #fff;
 		}
