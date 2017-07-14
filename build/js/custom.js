@@ -134,6 +134,7 @@ $(function() {
   });
 
 
+<<<<<<< HEAD
 $(window).load(function() {
   setTimeout(function () { 
     $(".loader").delay(100).fadeOut().remove();   
@@ -175,3 +176,5 @@ function Ascroll() {
   }, false);  // если изменить размер окна браузера, измениться ширина элемента
 }
 })()
+=======
+>>>>>>> 376f0c4775362220083c12e4c98ab1165f821e41
