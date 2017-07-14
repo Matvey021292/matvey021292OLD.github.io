@@ -115,3 +115,27 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666;color:#18183a;font-family:'Intro-Inline', sans-serif;font-weight:100; }";
   document.body.appendChild(css);
 };
+
+
+$('.prettySocial').prettySocial();
+
+
+$(function() {
+  $(window).scroll(function() {
+  if($(this).scrollTop() != 0) {
+  $('#topNubex').fadeIn();
+  } else {
+  $('#topNubex').fadeOut();
+  }
+  });
+  $('#topNubex').click(function() {
+  $('body,html').animate({scrollTop:0},700);
+  });
+  });
+
+
+$(window).load(function() {
+  setTimeout(function () { 
+    $(".loader").delay(100).fadeOut().remove();   
+  }, 2000);  
+});

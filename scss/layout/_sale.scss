@@ -2,39 +2,47 @@
 
   margin: 50px auto;
   width: 15%;
+
+  min-width: 200px;
   height: 40%;
-      background: rgba(74, 73, 73, 0.71);
-  border-radius: 10px;
+  transition:all 2s;
+  background: #eee;
   -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
   -moz-box-shadow:    0px 0px 8px rgba(0,0,0,0.3);
   box-shadow:         0px 0px 8px rgba(0,0,0,0.3);
   position: relative;
   z-index: 90;
-  right:5%;
+  left:-12%;
+  top:0;
   position:fixed;
-  transition:all 1s;
-  opacity:0;
-  transform:rotate(-3deg);
-  animation:upDown 5s linear;
-
+  z-index:10;
+  animation:upBaner 8s linear 4s;
+  @media(max-width: 500px){
+    left:-35%;
+  }
   &:hover{
-    opacity:0;
+    left:5%;
+
+  }
+  @keyframes upBaner{
+    0%{
+      left:-12%;
+      transform:scale(1);
+  
+    }
+   
+    50%{
+      left:40%;
+      transform:scale(1.5);
+
+
+    }
+    100{
+      left:5%;
+    }
   }
 }
-@keyframes upDown{
-  0%{
-    right:-5%;
-    opacity:0
-  }
-  50%{
-    right:15%;
-    opacity:1;
-  }
-  100%{
-    right:5%;
-    opacity:0;
-  }
-}
+
 
 .ribbon-wrapper-green {
   width: 85px;
@@ -49,16 +57,15 @@
   font: bold 15px Sans-Serif;
   color: #333;
   text-align: center;
-  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform:    rotate(45deg);
-  -ms-transform:     rotate(45deg);
-  -o-transform:      rotate(45deg);
-  position: relative;
-  padding: 7px 0;
-  left: -5px;
-  top: 15px;
-  width: 120px;
+  -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    position: relative;
+    padding: 9px 4px;
+    left: -8px;
+    top: 26px;
+    width: 128px;
   background-color: #BFDC7A;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45)); 
   background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45); 
@@ -87,5 +94,46 @@
 .ribbon-green:after{
   right: 0;
 }
-
-
+.box {
+    width:100%;
+    height:100%;
+    background:#FFF;
+}
+ 
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 10px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}

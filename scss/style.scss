@@ -1,14 +1,16 @@
 @import "base/_reset";
 @import "base/_fonts";
+
 @import "components/hamburger-icon.scss";
 @import "components/_mixin";
+@import "layout/_preloader";
 // @import "components/slick";
 // @import "components/slick-theme";
 @import "layout/_body";
 @import "layout/_logoKiev";
 @import "layout/_header";
 @import "layout/_nav-main";
-
+@import "layout/_borderEfect";
 @import "layout/_aboutme";
 @import "layout/_section_slider";
 @import "layout/_section";
@@ -16,4 +18,5 @@
 @import "layout/_sale";
 @import "layout/_slidebox";
 @import "layout/_media";
+@import "layout/_footer";
 
