@@ -95,7 +95,7 @@ $(function() {
     $('#show').toggleClass('show-nav');
      return false;
   });
- 
+
   
 });
 
@@ -104,6 +104,22 @@ $(function() {
 $(document).keyup(function(e) {
   if (e.keyCode == 27) {
    $('body').removeClass('show-nav');
+  }
+});
+$(function() {
+  $('#responsleftTitle').click(function() {
+    $('#show_block').toggleClass('show_block');
+     return false;
+  });
+ 
+  
+});
+
+
+// Toggle with hitting of ESC
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+   $('body').removeClass('show_block');
   }
 });
 
