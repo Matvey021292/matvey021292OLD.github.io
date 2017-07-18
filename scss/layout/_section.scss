@@ -31,7 +31,7 @@
             order: 0;
             flex-basis: 58%;
              @media(max-width: 800px) {
-                    margin: 10% 0 0px 0px;
+                    margin: 12% 0 0px 0px;
                 }
             &>h2 {
                 font-family: $fontfamilyintroInline;
@@ -120,22 +120,38 @@
                 flex-grow: 1;
                 order: 1;
                 flex-basis: 19%;
+                 &:hover .rightTitle {
+                    background-image: url(../img/flag1.1.png);
+                } 
 
 
                 @media(max-width: 800px) {
                     position:absolute;
-                    top:0;
+                    top:3%;
                     right:0;
                     background:#eee;
                     z-index:2;
                     padding: 2%;
                     right:-100%;
+
+
                     
 
                 }
-                &.aside_visibility{
+                &.show-nav{
                     right:0;
+                    width:100%;
+                    padding:5% 0 0 0;
+                    div{
+                        padding:0% 5% 0 5%;
+                    
+
+                    }
+
+
                 }
+
+
 
 
 
@@ -154,9 +170,7 @@
                     border-left: none; // padding:2%;
                     // padding-right: 6%;
                     text-shadow: none;
-                    &:hover {
-                        // border-right:20px solid $colorgreen;
-                    }
+                  
                 }
                 
             &:hover {
@@ -174,24 +188,27 @@
                     font-size: .9em;
     
                     margin-bottom: 65px;
-                    padding: 6% 5%;
+                    padding: 6% 3%;
 
                     transition: all 1s;
                     text-align: center;
-                    
+                    cursor: pointer;
                     color: #fff;
                     background: url(../img/flag1.png)no-repeat;
                     background-size: 100% 100%;
+                    @media(max-width:800px){
+                        margin-bottom:10px;
+                        display:none;
+                    }
                 }
-                &:hover .rightTitle {
-                    background-image: url(../img/flag1.1.png);
-                } // &:hover
+               // &:hover
                 // {
                 //     border-top: 3px solid $colorgreen;
                 // }
               
             }
 #responsrightTitle{
+    display:block;
     position:absolute;
     right:-1%;
     top:0;

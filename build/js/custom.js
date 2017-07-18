@@ -89,7 +89,23 @@ TxtRotate.prototype.tick = function() {
   }, delta);
 };
 
+// Normal Clicks
+$(function() {
+  $('#responsrightTitle').click(function() {
+    $('#show').toggleClass('show-nav');
+     return false;
+  });
+ 
+  
+});
 
+
+// Toggle with hitting of ESC
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+   $('body').removeClass('show-nav');
+  }
+});
 
 
 

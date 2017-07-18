@@ -5,8 +5,13 @@
   font-family: $fontfamilyintroInline;
   text-align:center;
   overflow:hidden;
-  @media(max-width:400px){
-  	font-size:8px;
+  @media(max-width:800px){
+    font-size:0.7em;
+
+  }
+  @media(max-width:600px){
+  	font-size:10px;
+
   }
 }
 
