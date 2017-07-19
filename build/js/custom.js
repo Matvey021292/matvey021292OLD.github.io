@@ -124,7 +124,12 @@ $(document).keyup(function(e) {
 });
 
 
-
+(function() {
+        var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+        if(isSafari) {
+          document.getElementById('support-note').style.display = 'block';
+        }
+      })();
 
 
 

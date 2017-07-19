@@ -52,6 +52,11 @@
                 {
                     margin: 0 0 20px 30px;
                 }
+                 @media(max-width: 600px)
+                {
+                    text-align:center;
+                    margin:5% 0 5% 0;
+                }
                 a
                 {
                     color: $colorH;
@@ -60,6 +65,8 @@
             .blog-content-news
             {
                 margin: 0 8%;
+
+
             }
             &.aside
             {
@@ -73,12 +80,35 @@
                      
                     position: absolute;
                     z-index: 2;
-                    top: 3%;
+                    top: 3.5%;
                     left: 0;
                     left: -110%;
-                    padding: 2%;
-                    background: #eee;
-                     width: 70%;
+                     width: 100%;
+                     text-align:center;
+                    
+                     background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, rgba(36, 59, 85, 0.95), rgba(20, 30, 48, 0.93));  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, rgba(36, 59, 85, 0.95), rgba(20, 30, 48, 0.95)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                        a{
+                            color:#fff;
+                            
+                        }
+                        h3{
+                            border-bottom:2px solid #fff;
+                            letter-spacing:4px;
+                        }
+                        .more{
+                            border-bottom:2px solid #fff;
+                        }
+
+                        .blog-content-news{
+                            @media(max-width:600px){
+                    padding:2% 10% !important;
+
+
+                }
+                        }
+
                   
                         figcaption{
                             display:none;
@@ -88,7 +118,7 @@
                 &.show_block
                 {
                     left: 0;
-                    width: 70%;
+                    width: 100%;
                     // padding: 5% 0 0 0;
                     // div
                     // {
@@ -186,8 +216,9 @@
                     top: 3%;
                     right: 0;
                     right: -100%;
-
+                    width:100%;
                     padding: 2%;
+                    padding: 5% 0 0 0;
 
                     background: #eee;
                      div
@@ -203,8 +234,8 @@
                 {
                     right: 0;
 
-                    width: 60%;
-                    padding: 5% 0 0 0;
+                    width: 100%;
+                    
                    
                 }
                 &:last-child
@@ -237,28 +268,7 @@
             }
         }
     }
-    .leftTitle{
-        font-family: $fontfamilyintroInline;
-        font-size: .9em;
 
-        margin-bottom: 65px;
-        padding: 10% 3%;
-
-        cursor: pointer;
-        transition: all 1s;
-        text-align: center;
-
-        color: #fff;
-        background: url(../img/flag1.3.png)no-repeat;
-        background-size: 100% 100%;
-        @media(max-width:800px)
-        {
-            display: none;
-
-            margin-bottom: 10px;
-        }
-
-    }
     .rightTitle
     {
         font-family: $fontfamilyintroInline;
@@ -288,18 +298,16 @@
 }
 #responsleftTitle{
     font-size: .6em;
-
+    left: 4.5%;
     position: absolute;
     z-index: 2;
     top: 0;
-    left: -1%;
+    width:40%;
+    
 
-    display: block;
+ 
 
-    margin: 0;
-    padding: 4% 10% 4% 8%;
-
-    background-size: 100% 100%;
+    
     @media(min-width:601px)
     {
         display: none;
@@ -308,18 +316,16 @@
 #responsrightTitle
 {
     font-size: .6em;
-
+    margin:1em;
+    
     position: absolute;
     z-index: 2;
     top: 0;
-    right: -1%;
+    right: 6.5%;
+    width:40%;
 
-    display: block;
 
-    margin: 0;
-    padding: 4% 2% 4% 4%;
 
-    background-size: 100% 100%;
     @media(min-width:800px)
     {
         display: none;
