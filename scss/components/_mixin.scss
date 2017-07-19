@@ -103,3 +103,9 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, F
     }
 
   $backgroundHead: linear-gradient(to right, #ECE9E6,#fff);
+
+  @mixin _colorGradientBackgrounBlue($opacity:0.93){
+    background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, rgba(36, 59, 85,$opacity), rgba(20, 30, 48, $opacity));  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, rgba(36, 59, 85,$opacity), rgba(20, 30, 48,$opacity)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
