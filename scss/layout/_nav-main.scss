@@ -5,17 +5,19 @@ nav {
 	height:auto;
 	overflow:hidden;
 	background:none;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAGFBMVEX29vb19fXw8PDy8vL09PTz8/Pv7+/x8fGKuegbAAAAyUlEQVR42pXRQQ7CMBRDwST9pfe/MahEmgURbt7WmpVb6+vG0dd9REnn66xRy/qXiCgmEIIJhGACIZhACCYQgvlDCDFIEAwSBIMEwSBBMEgQDBIEgwTBIEEwCJEMQiSDENFMQmQzCZEbNyGemd6KeGZ6u4hnXe2qbdLHFjhf1XqNLXHev4wdMd9nspiEiWISJgqECQJhgkCYIBAmCIQJAmGCQJggECYJhAkCEUMEwhCBMEQgDJEIQ2RSg0iEIRJhiB/S+rrjqvXQ3paIJUgPBXxiAAAAAElFTkSuQmCC);
-	
+	@include _colorBackground;
 	
 
 }
 nav ul {
 	margin:20px 0;
 	text-align:center;
-	border:2px solid #eee;
-	@include _colorGradientBackgrounBlue;
+
+	@include _colorGradientBackgrounBlue;	
+	
 	border:4px solid $colorH;
+	border-left:none;
+	border-right:none;
 
 }
 nav ul li {
@@ -215,8 +217,11 @@ nav ul li a:hover {
 	color:#333;
 }
 #sticky{
-	
+	@media(max-width:800px){
+	@include _colorBackground;	
 }
+}
+
 .sticky{
 	position:fixed;
 	top:0;

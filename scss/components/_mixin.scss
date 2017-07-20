@@ -86,6 +86,28 @@ $colorBlue:#243B55;
 	width: 13%;	
 	margin-left: 20px;
 
+}     
+// beckgroundBODY
+@mixin _colorBackground{
+      background: #ADA996;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, rgba(234, 234, 234, 0.90), rgba(219, 219, 219, 0.90), rgba(242, 242, 242, 0.90), rgba(173, 169, 150, 0.7))
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+// backgroundBOX
+@mixin _colorBOX{
+  background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+@mixin _colorGradient{
+  background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
 }
 
 @mixin _background{

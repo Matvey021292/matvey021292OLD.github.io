@@ -3,6 +3,11 @@
 	margin:0 auto;
 	padding: 1% 0;
   font-family:$fontfamilyintroInline;
+  @media(max-width: 500px){
+    width:100%;
+    margin:4% 0;
+
+  }
 
 
 	.blog-content{
@@ -32,6 +37,7 @@
   width: 100%;
   height: 200px;
   background-color: #e7eaf0;
+  height:300px;
 }
 @media only screen and (min-width: 768px) {
   #google-container {
