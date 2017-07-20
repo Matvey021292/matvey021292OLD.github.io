@@ -1053,7 +1053,7 @@ footer,
 	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
 .button--antiman::before {
-	border: 2px solid #37474f;
+	border: 2px solid $colorgreen;
 	opacity: 0;
 	-webkit-transform: scale3d(1.2, 1.2, 1);
 	transform: scale3d(1.2, 1.2, 1);
@@ -1068,25 +1068,25 @@ footer,
 	border-width: 3px;
 }
 .button--antiman.button--inverted::before {
-	border-color: #7986cb;
+	border-color: $colorgreen;
 }
 .button--antiman.button--inverted-alt::before {
-	border-color: #3f51b5;
+	border-color:$colorgreen;
 }
 .button--antiman::after {
 	background: #fff;
 }
 .button--antiman.button--inverted::after {
-	background: #7986cb;
+	background:$colorgreen;
 }
 .button--antiman.button--inverted-alt::after {
-	background: #3f51b5;
+	background: $colorgreen;
 }
 .button--antiman.button--inverted:hover {
-	color: #7986cb;
+	color: $colorgreen;
 }
 .button--antiman.button--inverted-alt:hover {
-	color: #3f51b5;
+	color:$colorgreen;
 }
 .button--antiman:hover::before {
 	opacity: 1;

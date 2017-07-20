@@ -57,10 +57,7 @@ background: linear-gradient(to top, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Fir
 
 .ip-loader {
     bottom: 50%;
-    @media(max-width:500px){
-        left:5%;
-        bottom: 40%;
-    }
+   
 }
 
 .ip-header .ip-inner {
